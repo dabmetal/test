@@ -241,8 +241,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526528509}
-  - component: {fileID: 526528510}
   - component: {fileID: 526528511}
+  - component: {fileID: 526528510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -266,33 +266,31 @@ Transform:
   - {fileID: 1500817456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &526528510
-Rigidbody:
+--- !u!143 &526528510
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526528507}
-  serializedVersion: 5
-  m_Mass: 200
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &526528511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,9 +300,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 526528507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 292d0ac7d3719b2a3a886570a21ec744, type: 3}
+  m_Script: {fileID: 11500000, guid: e0f6c24e6c97f045eb00fd8013743b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  moveSpeed: 5
+  gravity: 9.81
+  mainCamera: {fileID: 0}
+  facing: 0
 --- !u!1 &746116662
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +320,7 @@ GameObject:
   - component: {fileID: 746116665}
   - component: {fileID: 746116664}
   - component: {fileID: 746116663}
+  - component: {fileID: 746116667}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -418,6 +422,31 @@ Transform:
   - {fileID: 1803396929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &746116667
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746116662}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2.2204459e-16
+  m_Radius: 4.9999995
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &824189606
 GameObject:
   m_ObjectHideFlags: 0
