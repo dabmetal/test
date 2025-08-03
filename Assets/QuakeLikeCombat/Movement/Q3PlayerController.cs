@@ -40,7 +40,7 @@ namespace Q3Movement
         [SerializeField] private MovementSettings m_StrafeSettings = new MovementSettings(1, 50, 50);
 
         /// <summary>
-        /// Returns player's current speed.
+        /// Returns player's current speed. VYACHESLAV GUSEV 
         /// </summary>
         public float Speed { get { return m_Character.velocity.magnitude; } }
         private CharacterController m_Character;
